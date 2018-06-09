@@ -50,6 +50,7 @@ public class Lesson {
         private String Room;
         private String Subject;
 
+
         public Builder setLessonName(String lessonName) {
             this.lessonName = lessonName;
             return this;
