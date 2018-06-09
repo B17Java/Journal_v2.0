@@ -10,7 +10,7 @@ public class Teacher {
     private String phone;
     private String nikGit;
 
-    private Teacher(Builder builder) {
+    public Teacher(Builder builder) {
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
     }
@@ -47,7 +47,12 @@ public class Teacher {
         return nikGit;
     }
 
-    public class Builder {
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
+
+    public static class Builder {
         private String firstName;
         private String lastName;
         private String age;
