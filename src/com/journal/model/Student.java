@@ -10,9 +10,9 @@ public class Student {
     private String phone;
     private String nikGit;
 
-    public Student(Buider buider) {
-        this.firstName = buider.firstName;
-        this.lastName = buider.lastName;
+    public Student(Builder builder) {
+        this.firstName = builder.firstName;
+        this.lastName = builder.lastName;
     }
 
     public int getId() {
@@ -47,7 +47,7 @@ public class Student {
         return nikGit;
     }
 
-    public static class Buider {
+    public static class Builder {
         private int id;
         private String firstName;
         private String lastName;
@@ -57,40 +57,7 @@ public class Student {
         private String phone;
         private String nikGit;
 
-        public Buider setFirstName(String firstName) {
-            this.firstName = firstName;
-            return this;
-        }
 
-        public Buider setLastName(String lastName) {
-            this.lastName = lastName;
-            return this;
-        }
-
-        public Buider setAge(String age) {
-            this.age = age;
-            return this;
-        }
-
-        public Buider setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-
-        public Buider setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-
-        public Buider setPhone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-
-        public Buider setNikGit(String nikGit) {
-            this.nikGit = nikGit;
-            return this;
-        }
 
         public Student build() {
             return new Student(this);
