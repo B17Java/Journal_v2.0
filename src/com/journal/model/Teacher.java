@@ -48,7 +48,6 @@ public class Teacher {
     }
 
     public class Builder {
-        private int id;
         private String firstName;
         private String lastName;
         private String age;
