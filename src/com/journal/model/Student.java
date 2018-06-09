@@ -10,9 +10,9 @@ public class Student {
     private String phone;
     private String nikGit;
 
-    public Student(Builder buider) {
-        this.firstName = buider.firstName;
-        this.lastName = buider.lastName;
+    public Student(Builder builder) {
+        this.firstName = builder.firstName;
+        this.lastName = builder.lastName;
     }
 
     public int getId() {
@@ -45,6 +45,11 @@ public class Student {
 
     public String getNikGit() {
         return nikGit;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
     }
 
     public static class Builder {

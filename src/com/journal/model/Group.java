@@ -7,12 +7,17 @@ public class Group {
     public Group(Builder builder) {
         this.nameGroup = builder.nameGroup;
     }
-  
+
     public int getId() {
         return id;
     }
 
     public String getGroup() {
+        return nameGroup;
+    }
+
+    @Override
+    public String toString() {
         return nameGroup;
     }
 
