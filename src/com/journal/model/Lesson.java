@@ -50,11 +50,6 @@ public class Lesson {
         private String Room;
         private String Subject;
 
-        public Builder setId(int id) {
-            this.id = id;
-            return this;
-        }
-
         public Builder setLessonName(String lessonName) {
             this.lessonName = lessonName;
             return this;
