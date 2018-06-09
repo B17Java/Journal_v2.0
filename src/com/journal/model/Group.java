@@ -7,7 +7,7 @@ public class Group {
     public Group(Builder builder) {
         this.nameGroup = builder.nameGroup;
     }
-
+  
     public int getId() {
         return id;
     }
@@ -17,6 +17,7 @@ public class Group {
     }
 
     public static class Builder {
+
         private String nameGroup;
 
         public Builder setGroup(String nameGroup) {
