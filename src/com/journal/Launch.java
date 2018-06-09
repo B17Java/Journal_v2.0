@@ -29,7 +29,7 @@ public class Launch {
             }
             switch (choice) {
                 case 0:  isTrue = false; break;
-                //case 1:  lessonData.inputLessonData(); break;
+                case 1:  lessonData.inputLessonData(); break;
                 case 2:  teacherData.inputTeacherData(); break;
                 case 3:  groupData.inputGroupData(); break;
                 case 4:  studentData.inputStudentData(); break;
