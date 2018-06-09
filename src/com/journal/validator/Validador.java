@@ -10,32 +10,24 @@ public class Validador {
     private static Pattern regexPattern;
     private static Matcher regMatcher;
 
-    public static boolean validateEmailAddress(String emailAddress) {
+    public static boolean validateEmailAddress(String emailAddress) throws IncorrectInputException {
 
         regexPattern = Pattern.compile("^[(a-zA-Z-0-9-\\_\\+\\.)]+@[(a-z-A-z)]+\\.[(a-zA-z)]{2,3}$");
         regMatcher   = regexPattern.matcher(emailAddress);
-        if(regMatcher.matches()) {
-            return true;
-        } else {
-            System.out.println("Incorrectly input email");
-            return false;
+        if(regexPattern.matcher(emailAddress).matches()) {
+            throw new IncorrectInputException("Incorrectly input email");
         }
     }
 
-    public static boolean validateMobileNumber(String mobileNumber) {
+    public static void validateMobileNumber(String mobileNumber) throws IncorrectInputException {
         regexPattern = Pattern.compile("^\\+[0-9]{2,3}+-[0-9]{10}$");
-        regMatcher   = regexPattern.matcher(mobileNumber);
-        if(regMatcher.matches()) {
-            return true;
-        } else {
-            System.out.println("Incorrectly input mobile number");
-            return false;
+        if(regexPattern.matcher(mobileNumber).matches()) {
+            throw new IncorrectInputException("Incorrectly input mobile number");
         }
     }
 
     public static void validateGroup(String group) throws IncorrectInputException {
         regexPattern = Pattern.compile("[a-zA-Z-а-яА-Я]{1,3}[0-9]{1,2}");
-        regMatcher   = regexPattern.matcher(group);
         if(!regexPattern.matcher(group).matches()) {
             throw new IncorrectInputException("Incorrectly input group");
         }
