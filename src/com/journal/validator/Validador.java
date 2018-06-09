@@ -1,7 +1,6 @@
 package com.journal.validator;
 
 import com.journal.exception.IncorrectInputException;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
